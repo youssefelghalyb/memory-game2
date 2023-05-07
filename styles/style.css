@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #bebaba;
+    font-family: 'Sigmar', cursive;
+}
+
+
+.start-game {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #0008ff8c;
+    z-index: 2;
+}
+
+
+.start-game button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    border: none;
+    padding: 14px 51px;
+    background-color: #e16e0c;
+    font-size: 26px;
+    letter-spacing: 1px;
+    border-radius: 7px;
+    color: #FFF;
+    cursor: pointer;
+    font-family: 'Sigmar', cursive;
+}
+
+
+
+.main-contanier {
+    margin: 0 auto;
+    width: 1080px;
+
+}
+
+
+.info{
+    border: 3px solid #037cb4;
+    border-radius: 3px;
+    /* margin: 0 0 0 12px  ; */
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 18px;
+}
+
+
+.game-contanier{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.game-contanier > div{
+    margin: 4px 20px;
+    border: 2px solid #037cb4;
+    border-radius: 5px;
+
+    width: 175px;
+}
+
+.game-contanier  div i {
+    text-align: center;
+}
+
+
+.game-contanier .game-block {
+    height: 140px;
+    transition:  transform 0.5s;
+    transform-style:preserve-3d;
+    cursor: pointer;
+    position: relative;
+ 
+}
+
+
+.game-contanier .game-block  .front{
+    line-height: 140px;
+    background-color: #000;
+    font-size: 40px;
+    font-weight: bold;
+    color: #cdd8dd;
+}
+
+.game-contanier .game-block  .front::before{
+    content: '!';
+}
+
+
+.game-contanier .game-block  .back{
+    background-color: #cdd8dd;
+    padding:17px;
+    transform: rotateY(180deg);
+}
+
+
+.game-contanier .game-block .card{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+
+
+/*ADD CLASS BY JS */
+
+.flipped , .has-match{
+   -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.noclick{
+    pointer-events: none;
+}

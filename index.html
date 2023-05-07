@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--Fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+<!--style-->
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Memory Game</title>
+</head>
+<body>
+
+    <div class="start-game">
+        <button>Start</button>
+    </div> 
+    
+    <div class="main-contanier">
+        <!--Info-->
+        <div class="info" >
+            <!--Name-->
+            <div class="name">
+                Hello : <span id="name"></span>
+            </div>
+            <!--Name-->
+
+            <!--Score -->
+            <div class="score">
+                Score : <span id="Score">0</span>
+            </div>
+            <!--Score -->
+
+        </div>
+        <!--Info-->
+
+        <!--Game Container-->
+        <div class="game-contanier">
+            <!-- Ghost Block-->
+            <div class="game-block " data-set="ghost"  >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-ghost fa-7x"></i>
+                </div>
+            </div>
+
+            <div class="game-block " data-set="ghost" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-ghost fa-7x"></i>
+                </div>
+            </div>
+            <!-- Ghost Block-->
+
+
+
+
+            <!-- dragon Block-->
+            <div class="game-block" data-set="dragon" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-dragon fa-7x"></i>
+                </div>
+            </div>
+
+            <div class="game-block" data-set="dragon" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-dragon fa-7x"></i>
+                </div>
+            </div>
+            <!-- dragon Block-->
+
+
+
+
+
+
+            <!-- Knight Block-->
+            <div class="game-block" data-set="knight" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-chess-knight fa-7x"></i>
+                </div>
+            </div>
+
+            <div class="game-block" data-set="knight" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-chess-knight fa-7x"></i>
+                </div>
+            </div>
+            <!-- Knight Block-->
+
+
+
+
+            <!--Skull Block-->
+            <div class="game-block" data-set="skull" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-skull-crossbones fa-7x"></i>
+                </div>
+            </div>
+
+            <div class="game-block" data-set="skull" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-skull-crossbones fa-7x"></i>
+                </div>
+            </div>
+            <!-- Skull Block-->
+
+
+
+
+            <!-- Diamond Block-->
+            <div class="game-block" data-set="diamond" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-diamond fa-7x"></i>
+                </div>
+            </div>
+
+
+            <div class="game-block" data-set="diamond" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-diamond fa-7x"></i>
+                </div>
+            </div>
+            <!-- Diamond Block-->
+
+
+
+
+
+            <!--  Eye Block-->
+            <div class="game-block" data-set="eye" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-eye fa-7x"></i>
+                </div>
+            </div>
+
+            <div class="game-block" data-set="eye" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-eye fa-7x"></i>
+                </div>
+            </div>
+            <!-- Eye Block-->
+
+
+
+
+            <!-- Scissors Block-->
+            <div class="game-block" data-set="scissors" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card"> 
+                    <i class="fa-solid fa-scissors fa-7x"></i>
+                </div>
+            </div>
+
+            <div class="game-block" data-set="scissors" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-scissors fa-7x"></i>
+                </div>
+            </div>
+            <!-- Scissors Block-->
+
+
+
+
+            <!-- Cube Block-->
+            <div class="game-block" data-set="cube" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-cube fa-7x"></i>
+                </div>
+            </div>
+
+            <div class="game-block" data-set="cube" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-cube fa-7x"></i>
+                </div>
+            </div>
+            <!-- Cube Block-->
+
+
+
+
+
+
+            <!--Crosshairs Block-->
+            <div class="game-block" data-set="crosshairs" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-crosshairs fa-7x"></i>
+                </div>
+            </div>
+
+            <div class="game-block" data-set="crosshairs" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-crosshairs fa-7x"></i>
+                </div>
+            </div>
+            <!--Crosshairs Block-->
+
+
+
+            <!-- Meteor Block-->
+            <div class="game-block" data-set="meteor" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-meteor fa-7x"></i>
+                </div>
+            </div>
+
+            <div class="game-block" data-set="meteor" >
+                <div class="front card">
+
+                </div>
+                
+                <div class="back card">
+                    <i class="fa-solid fa-meteor fa-7x"></i>
+                </div>
+            </div>
+            <!-- Meteor Block-->
+        </div>
+
+
+    </div>
+
+
+    <audio src="audio/success-fanfare-trumpets-6185.mp3" id="startA"></audio>
+    <audio src="audio/success-1-6297.mp3" id="success"></audio>
+    <audio src="audio/wrong-answer-129254 (mp3cut.net).mp3" id="failure"></audio>
+
+<script src="js/app.js"></script>
+</body>
+</html>
