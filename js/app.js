@@ -4,7 +4,12 @@ const startGame = document.querySelector('.start-game');
 const nameFiled = document.querySelector('#name') ;
 let Name ;
 
-// Logic Variables 
+//End Game 
+
+// Logic Variables Variables
+const endTheGame = document.querySelector('.end-game')
+
+const restart = document.querySelector('.end-game button')
 
 let duration = 1000; 
 
@@ -79,8 +84,8 @@ function Check(){
     if(filppedCards.length === 2){
         stopclick();
         checkForMatch(filppedCards[0] , filppedCards[1])
-        
     }
+    endGame ()
 
 }
 
@@ -91,7 +96,6 @@ function stopclick(){
 
     setTimeout(() => {
         mainBlock.classList.remove('noclick')
-        console.log('stio')
     }, duration)
 }
 
@@ -121,7 +125,20 @@ function checkForMatch(firstCard , secondCard){
         score.innerHTML = parseInt(score.innerHTML) -5 
         document.getElementById('failure').play()
     }
+}
 
+
+//END GAME 
+
+function endGame (){
+    const allCardsMatched = blocks.every((block) => block.classList.contains('has-match'));
+    
+    if (allCardsMatched){
+        endTheGame.style.display = 'block';
+        restart.onclick = function () {
+            location.reload();
+        };
+    }
 
 }
 
